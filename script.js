@@ -1,28 +1,20 @@
-// Fetch data
-
-//fetch("https://kea-alt-del.dk/t5/api/productids")
-//    .then(e => e.json())
-//    .then(function (ids) {
-//        ids.forEach(showIds)
-//    });
-//
-//function showIds(oneId) {
-//    fetch("https://kea-alt-del.dk/t5/api/product?id=" + (oneId))
-
 let starters = document.querySelector(".dataStarters");
 let mains = document.querySelector(".dataMains");
 let sides = document.querySelector(".dataSides");
 let desserts = document.querySelector(".dataDesserts");
 let drinks = document.querySelector(".dataDrinks");
 
+let modalBackground = document.querySelector(".modalbackground");
+
+modalBackground.addEventListener("click", () => {
+    modalBackground.classList.add("hide");
+})
+
 fetch("https://kea-alt-del.dk/t5/api/productlist")
     .then(e => e.json())
-    .then(e => e.forEach(showProducts)
-    )
+    .then(e => e.forEach(showProducts))
 
 function showProducts(products) {
-
-    console.log(products)
 
     const imageName = products.image;
     const base = "https://kea-alt-del.dk/t5/site/imgs/";
@@ -40,13 +32,13 @@ function showProducts(products) {
         myCopy.querySelector(".dataPrice").classList.add("discount");
         myCopy.querySelector(".dataDiscount").classList.toggle("hide");
         myCopy.querySelector(".dataDiscount").textContent = Math.round(products.price * ((100 - products.discount) / 100)) + " Kr";
-    } else{
+    } else {
         myCopy.querySelector(".dataDiscount").remove();
     }
     if (products.soldout) {
         myCopy.querySelector("article").classList.add("soldout");
         myCopy.querySelector(".dataSoldoutlogo").classList.remove("hide");
-    } else{
+    } else {
         myCopy.querySelector(".dataSoldoutlogo").remove();
     }
     myCopy.querySelector(".dataImg").setAttribute("src", smallImg);
@@ -56,8 +48,12 @@ function showProducts(products) {
     if (!products.vegetarian) {
         myCopy.querySelector(".dataVeggie").remove();
     }
+    myCopy.querySelector("button").addEventListener("click", () => {
+        fetch("https://kea-alt-del.dk/t5/api/product?id=" + products.id) .then(e => e.json())
+        .then(showDetails)
+    })
 
-    // Append Child to Correct Section
+    // Append Child to Correct Section (^Add all myCopy Content Above^)
 
     if (products.category == "starter") {
         starters.appendChild(myCopy);
@@ -74,7 +70,11 @@ function showProducts(products) {
     if (products.category == "drinks") {
         drinks.appendChild(myCopy);
     }
-
-
-
 }
+
+function showDetails(data){
+    console.log(data);
+
+    modalBackground.classList.remove("hide");
+}
+

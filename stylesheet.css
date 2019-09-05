@@ -27,7 +27,6 @@ nav {
     font-family: 'IM Fell Double Pica', serif;
     font-size: 1.7rem;
     text-transform: uppercase;
-
 }
 
 .sectionline {
@@ -75,6 +74,7 @@ li {
 }
 
 main {
+    position: relative;
     margin: auto;
     width: 80%;
     min-width: 250px;
@@ -124,7 +124,7 @@ article p {
         "veggie veggie"
 }
 
-.allergens img{
+.allergens img {
     background-color: #fff;
     border-radius: 50%;
 }
@@ -160,8 +160,8 @@ article .allergens img {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
-.soldoutlogo{
- width: 120%;
+.soldoutlogo {
+    width: 120%;
     position: absolute;
     top: 20%;
     right: -10%;
@@ -192,10 +192,36 @@ article .allergens img {
 }
 
 .starrating {
-margin: 1rem;
+    margin: 1rem;
     margin-bottom: 0;
 }
 
 .star {
     width: 25px;
+}
+
+button {
+    border: none;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: lightgrey;
+    font-size: 1.1rem;
+}
+
+.modalbackground {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+width: 40%;
+    margin: auto;
+    margin-top: 250px;
+    min-width: 350px;
+    padding-bottom: 3rem;
 }

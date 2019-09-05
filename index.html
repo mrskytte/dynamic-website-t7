@@ -21,22 +21,10 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="sectionline"><div class="line"></div><h1>Starters</h1><div class="line"></div></div>
-        <div id="starters" class="dataStarters menusection"></div>
-        <div class="sectionline"><div class="line"></div><h1>Mains</h1><div class="line"></div></div>
-        <div id="mains" class="dataMains menusection"></div>
-        <div class="sectionline"><div class="line"></div><h1>Side orders</h1><div class="line"></div></div>
-        <div id="sides" class="dataSides menusection"></div>
-        <div class="sectionline"><div class="line"></div><h1>desserts</h1><div class="line"></div></div>
-        <div id="desserts" class="dataDesserts menusection"></div>
-        <div class="sectionline"><div class="line"></div><h1>drinks</h1><div class="line"></div></div>
-        <div id="drinks" class="dataDrinks menusection"></div>
-    </main>
-    <template>
-        <article>
+    <div class="modalbackground hide">
+        <article class="modal">
             <img class="dataImg" alt="Russian Ringbread" src="imgs/small/ringbroed-druer-sm.jpg" srcset="imgs/small/ringbroed-druer-sm.jpg 1x, imgs/large/ringbroed-druer.jpg 2x">
-            <div class="starrating hide">
+            <div class="starrating">
                 <img class="star starone" alt="Star" src="imgs/icons/star.png">
                 <img class="star startwo" alt="Star" src="imgs/icons/star.png">
                 <img class="star starthree" alt="Star" src="imgs/icons/star.png">
@@ -48,16 +36,65 @@
                 <p class="dataPrice">100</p>
                 <p class="dataDiscount newprice hide">50</p>
             </div>
+            <p class="dataLongTxt">Russisk ringbrød af Karapatisk mel</p>
+            <p class="dataAlcPercentage">10%</p>
+            <p class="dataRegion">Sibirien</p>
+            <div class="allergens">
+                <img class="lactose" alt="Contains Lactose" src="imgs/icons/milk_amber_50x50.png">
+                <img class="nuts" alt="Contains Nuts" src="imgs/icons/treenut_amber_50x50.png">
+                <img class="potato" alt="Contains Potatoes" src="imgs/icons/potato_50x50.png">
+                <img class="alcohol" alt="Contains Alcohol" src="imgs/icons/alcohol_amber.png">
+                <img class="dataVeggie" alt="Vegetarian" src="imgs/icons/vegetarian.png">
+            </div>
+        </article>
+    </div>
+    <main>
+        <div class="sectionline">
+            <div class="line"></div>
+            <h1>Starters</h1>
+            <div class="line"></div>
+        </div>
+        <div id="starters" class="dataStarters menusection"></div>
+        <div class="sectionline">
+            <div class="line"></div>
+            <h1>Mains</h1>
+            <div class="line"></div>
+        </div>
+        <div id="mains" class="dataMains menusection"></div>
+        <div class="sectionline">
+            <div class="line"></div>
+            <h1>Side orders</h1>
+            <div class="line"></div>
+        </div>
+        <div id="sides" class="dataSides menusection"></div>
+        <div class="sectionline">
+            <div class="line"></div>
+            <h1>desserts</h1>
+            <div class="line"></div>
+        </div>
+        <div id="desserts" class="dataDesserts menusection"></div>
+        <div class="sectionline">
+            <div class="line"></div>
+            <h1>drinks</h1>
+            <div class="line"></div>
+        </div>
+        <div id="drinks" class="dataDrinks menusection"></div>
+    </main>
+    <template>
+        <article>
+            <img class="dataImg" alt="Russian Ringbread" src="imgs/small/ringbroed-druer-sm.jpg" srcset="imgs/small/ringbroed-druer-sm.jpg 1x, imgs/large/ringbroed-druer.jpg 2x">
+            <h2 class="dataName name">Russian Ringbread</h2>
+            <div class="price">
+                <p class="dataPrice">100</p>
+                <p class="dataDiscount newprice hide">50</p>
+            </div>
             <p class="dataShortTxt">Russisk ringbrød af Karapatisk mel</p>
             <p class="dataRegion hide">Sibirien</p>
             <div class="allergens">
-                <img class="lactose hide" alt="Contains Lactose" src="imgs/icons/milk_amber_50x50.png">
-                <img class="nuts hide" alt="Contains Nuts" src="imgs/icons/treenut_amber_50x50.png">
-                <img class="potato hide" alt="Contains Potatoes" src="imgs/icons/potato_50x50.png">
-                <img class="alcohol hide" alt="Contains Alcohol" src="imgs/icons/alcohol_amber.png">
                 <img class="dataVeggie" alt="Vegetarian" src="imgs/icons/vegetarian.png">
             </div>
             <img class="dataSoldoutlogo soldoutlogo" alt="Sold Out" src="imgs/icons/soldout.png">
+            <button>See More..</button>
         </article>
     </template>
     <script src="script.js"></script>
