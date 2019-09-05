@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:500&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.restaurantname {
+    font-family: 'IM Fell Double Pica', serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+
+}
+
+.sectionline {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.line {
+    height: .2em;
+    width: 40%;
+    background-color: #000;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E3E2E2;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    margin: auto;
+    background-color: #F9F8F8;
+    padding: 1.3rem 0 .3rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+
+li {
+    margin-right: 5rem;
+}
+
+main {
+    margin: auto;
+    width: 80%;
+    min-width: 250px;
+}
+
+.menusection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+}
+
+article > img {
+    width: 100%;
+    max-height: 200px;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+
+article {
+    height: 400px;
+    position: relative;
+    display: grid;
+    border-radius: 2rem;
+    background-color: #F9F8F8;
+    box-shadow: 3px 7px 8px rgba(0, 0, 0, 0.15);
+}
+
+article h2,
+article p {
+    margin: 1rem;
+    margin-right: 140px +
+}
+
+.allergens {
+    position: absolute;
+    top: 1rem;
+    justify-self: start;
+    margin-left: 10px;
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "lactose nut"
+        "potato alcohol"
+        "veggie veggie"
+}
+
+.allergens img{
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.veggie {
+    grid-area: veggie;
+    justify-self: center;
+}
+
+.lactose {
+    grid-area: lactose;
+}
+
+.nuts {
+    grid-area: nut;
+}
+
+.potato {
+    grid-area: potato;
+}
+
+.alcohol {
+    grid-area: alcohol;
+}
+
+article .allergens img {
+    width: 40px;
+}
+
+.soldout {
+    opacity: .5;
+    order: 1;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+.soldoutlogo{
+ width: 120%;
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    opacity: 1;
+}
+
+.name {
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.hide {
+    display: none;
+}
+
+.price {
+    display: flex;
+    height: 1.4rem;
+}
+
+.discount {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.newprice {
+    color: red;
+}
+
+.starrating {
+margin: 1rem;
+    margin-bottom: 0;
+}
+
+.star {
+    width: 25px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"My Restaurant"</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p class="restaurantname">Petrograd</p>
+            <ul>
+                <li>Starters</li>
+                <li>Mains</li>
+                <li>Side Orders</li>
+                <li>Desserts</li>
+                <li>Drinks</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sectionline"><div class="line"></div><h1>Starters</h1><div class="line"></div></div>
+        <div id="starters" class="dataStarters menusection"></div>
+        <div class="sectionline"><div class="line"></div><h1>Mains</h1><div class="line"></div></div>
+        <div id="mains" class="dataMains menusection"></div>
+        <div class="sectionline"><div class="line"></div><h1>Side orders</h1><div class="line"></div></div>
+        <div id="sides" class="dataSides menusection"></div>
+        <div class="sectionline"><div class="line"></div><h1>desserts</h1><div class="line"></div></div>
+        <div id="desserts" class="dataDesserts menusection"></div>
+        <div class="sectionline"><div class="line"></div><h1>drinks</h1><div class="line"></div></div>
+        <div id="drinks" class="dataDrinks menusection"></div>
+    </main>
+    <template>
+        <article>
+            <img class="dataImg" alt="Russian Ringbread" src="imgs/small/ringbroed-druer-sm.jpg" srcset="imgs/small/ringbroed-druer-sm.jpg 1x, imgs/large/ringbroed-druer.jpg 2x">
+            <div class="starrating hide">
+                <img class="star starone" alt="Star" src="imgs/icons/star.png">
+                <img class="star startwo" alt="Star" src="imgs/icons/star.png">
+                <img class="star starthree" alt="Star" src="imgs/icons/star.png">
+                <img class="star starfour" alt="Star" src="imgs/icons/star.png">
+                <img class="star starfive" alt="Star" src="imgs/icons/star.png">
+            </div>
+            <h2 class="dataName name">Russian Ringbread</h2>
+            <div class="price">
+                <p class="dataPrice">100</p>
+                <p class="dataDiscount newprice hide">50</p>
+            </div>
+            <p class="dataShortTxt">Russisk ringbrød af Karapatisk mel</p>
+            <p class="dataRegion hide">Sibirien</p>
+            <div class="allergens">
+                <img class="lactose hide" alt="Contains Lactose" src="imgs/icons/milk_amber_50x50.png">
+                <img class="nuts hide" alt="Contains Nuts" src="imgs/icons/treenut_amber_50x50.png">
+                <img class="potato hide" alt="Contains Potatoes" src="imgs/icons/potato_50x50.png">
+                <img class="alcohol hide" alt="Contains Alcohol" src="imgs/icons/alcohol_amber.png">
+                <img class="dataVeggie" alt="Vegetarian" src="imgs/icons/vegetarian.png">
+            </div>
+            <img class="dataSoldoutlogo soldoutlogo" alt="Sold Out" src="imgs/icons/soldout.png">
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body></html>
