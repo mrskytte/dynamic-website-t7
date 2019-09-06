@@ -4,15 +4,20 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 h1 {
     text-transform: uppercase;
 }
 
-p {
+p, a {
     font-family: 'Roboto Condensed', sans-serif;
+}
 
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 nav {
@@ -64,9 +69,11 @@ ul {
     margin: 0;
     list-style-type: none;
     display: flex;
+    flex-flow: wrap;
     flex-direction: row;
     justify-content: flex-end;
     font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 li {
@@ -121,9 +128,17 @@ article p {
     grid-template-areas:
         "lactose nut"
         "potato alcohol"
-        "veggie veggie"
+        "veggie ."
 }
 
+.regionstar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    margin-bottom: 0;
+}
 .allergens img {
     background-color: #fff;
     border-radius: 50%;
@@ -131,7 +146,6 @@ article p {
 
 .veggie {
     grid-area: veggie;
-    justify-self: center;
 }
 
 .lactose {
@@ -191,11 +205,6 @@ article .allergens img {
     color: red;
 }
 
-.starrating {
-    margin: 1rem;
-    margin-bottom: 0;
-}
-
 .star {
     width: 25px;
 }
@@ -219,9 +228,11 @@ button {
 }
 
 .modal {
-width: 40%;
+    width: 40%;
+    max-width: 300px;
     margin: auto;
     margin-top: 250px;
     min-width: 350px;
     padding-bottom: 3rem;
+    overflow-x: scroll;
 }

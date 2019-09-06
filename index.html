@@ -13,17 +13,18 @@
         <nav>
             <p class="restaurantname">Petrograd</p>
             <ul>
-                <li>Starters</li>
-                <li>Mains</li>
-                <li>Side Orders</li>
-                <li>Desserts</li>
-                <li>Drinks</li>
+                <li><a href="#starters">Starters</a></li>
+                <li><a href="#mains">Mains</a></li>
+                <li><a href="#sides">Side Orders</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#drinks">Drinks</a></li>
             </ul>
         </nav>
     </header>
     <div class="modalbackground hide">
         <article class="modal">
             <img class="dataImg" alt="Russian Ringbread" src="imgs/small/ringbroed-druer-sm.jpg" srcset="imgs/small/ringbroed-druer-sm.jpg 1x, imgs/large/ringbroed-druer.jpg 2x">
+            <div class="regionstar">
             <div class="starrating">
                 <img class="star starone" alt="Star" src="imgs/icons/star.png">
                 <img class="star startwo" alt="Star" src="imgs/icons/star.png">
@@ -31,54 +32,55 @@
                 <img class="star starfour" alt="Star" src="imgs/icons/star.png">
                 <img class="star starfive" alt="Star" src="imgs/icons/star.png">
             </div>
+            <p class="dataRegion">Sibirien</p>
+            </div>
             <h2 class="dataName name">Russian Ringbread</h2>
             <div class="price">
                 <p class="dataPrice">100</p>
-                <p class="dataDiscount newprice hide">50</p>
+                <p class="dataDiscount newprice">50</p>
             </div>
             <p class="dataLongTxt">Russisk ringbrød af Karapatisk mel</p>
-            <p class="dataAlcPercentage">10%</p>
-            <p class="dataRegion">Sibirien</p>
+
             <div class="allergens">
-                <img class="lactose" alt="Contains Lactose" src="imgs/icons/milk_amber_50x50.png">
-                <img class="nuts" alt="Contains Nuts" src="imgs/icons/treenut_amber_50x50.png">
-                <img class="potato" alt="Contains Potatoes" src="imgs/icons/potato_50x50.png">
-                <img class="alcohol" alt="Contains Alcohol" src="imgs/icons/alcohol_amber.png">
-                <img class="dataVeggie" alt="Vegetarian" src="imgs/icons/vegetarian.png">
+                <img class="dataLactose lactose" alt="Contains Lactose" src="imgs/icons/milk_amber_50x50.png">
+                <img class="dataNuts nuts" alt="Contains Nuts" src="imgs/icons/treenut_amber_50x50.png">
+                <img class="dataPotato potato" alt="Contains Potatoes" src="imgs/icons/potato_50x50.png">
+                <img class="dataAlcohol alcohol" alt="Contains Alcohol" src="imgs/icons/alcohol_amber.png">
+                <img class="dataVeggie veggie" alt="Vegetarian" src="imgs/icons/vegetarian.png">
             </div>
         </article>
     </div>
     <main>
-        <div class="sectionline">
+        <div id="starters" class="sectionline">
             <div class="line"></div>
             <h1>Starters</h1>
             <div class="line"></div>
         </div>
-        <div id="starters" class="dataStarters menusection"></div>
-        <div class="sectionline">
+        <div class="dataStarters menusection"></div>
+        <div id="mains" class="sectionline">
             <div class="line"></div>
             <h1>Mains</h1>
             <div class="line"></div>
         </div>
-        <div id="mains" class="dataMains menusection"></div>
-        <div class="sectionline">
+        <div class="dataMains menusection"></div>
+        <div id="sides" class="sectionline">
             <div class="line"></div>
             <h1>Side orders</h1>
             <div class="line"></div>
         </div>
-        <div id="sides" class="dataSides menusection"></div>
-        <div class="sectionline">
+        <div class="dataSides menusection"></div>
+        <div id="desserts" class="sectionline">
             <div class="line"></div>
             <h1>desserts</h1>
             <div class="line"></div>
         </div>
-        <div id="desserts" class="dataDesserts menusection"></div>
-        <div class="sectionline">
+        <div class="dataDesserts menusection"></div>
+        <div id="drinks" class="sectionline">
             <div class="line"></div>
             <h1>drinks</h1>
             <div class="line"></div>
         </div>
-        <div id="drinks" class="dataDrinks menusection"></div>
+        <div class="dataDrinks menusection"></div>
     </main>
     <template>
         <article>
